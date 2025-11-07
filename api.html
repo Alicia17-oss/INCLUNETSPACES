@@ -1,14 +1,106 @@
-<!DOCTYPE html><html lang='es'><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width, initial-scale=1.0'><title>APIs – IncunetSpaces</title><link rel='stylesheet' href='style.css'></head><body><header class='topbar'>
-  <div class='logo'>Incunet<span>Spaces</span></div>
-  <nav class='nav-links'>
-    <a href='index.html'>Inicio</a>
-    <a href='voluntariados.html'>Voluntariados</a>
-    <a href='organizaciones.html'>Organizaciones</a>
-    <a href='quienes.html'>Quiénes Somos</a>
-    <a href='api.html'>APIs</a>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>APIs – IncunetSpaces</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="logo">Incunet<span>Spaces</span></div>
+    <nav class="nav-links">
+      <a href="index.html">Inicio</a>
+      <a href="voluntariados.html">Voluntariados</a>
+      <a href="organizaciones.html">Organizaciones</a>
+      <a href="quienes.html">Quiénes Somos</a>
+      <a href="api.html" class="active">APIs</a>
+    </nav>
+    <div class="nav-actions">
+      <button id="theme-toggle" class="hamburger">Modo AMOLED</button>
+      <button id="menu-toggle" class="hamburger">☰</button>
+    </div>
+  </header>
+
+  <nav id="mobile-menu" class="mobile-menu">
+    <a href="index.html">Inicio</a>
+    <a href="voluntariados.html">Voluntariados</a>
+    <a href="organizaciones.html">Organizaciones</a>
+    <a href="quienes.html">Quiénes Somos</a>
+    <a href="api.html">APIs</a>
   </nav>
-  <div class='nav-actions'>
-    <button id='theme-toggle' class='hamburger' aria-label='Cambiar tema'>Modo AMOLED</button>
-    <button id='menu-toggle' class='hamburger' aria-label='Abrir menú'>☰</button>
-  </div>
-</header><main class='container'><h2>APIs</h2></main><script src='script.js'></script></body></html>
+
+  <main class="container">
+    <div class="section-title"><h2>Estructura de las API’s</h2></div>
+    <section class="grid">
+      <article class="card reveal">
+        <div class="content">
+          <span class="badge">GET</span>
+          <h3>/api/voluntariados</h3>
+          <p>Obtiene la lista de campañas de voluntariado disponibles.</p>
+          <div class="codeblock">
+            <button class="copy" onclick="copyCode(this)">📋 Copiar</button>
+            <code>[
+  {
+    "id_vol": 1,
+    "nombre_vol": "Reforestación en Cancún",
+    "categoria": "Medio Ambiente",
+    "descripcion": "Plantación y cuidado de árboles en zonas afectadas por la deforestación.",
+    "img": "assets/images/voluntariados/reforestacion.jpg",
+    "fecha_inicio": "2025-06-01"
+  }
+]</code>
+          </div>
+        </div>
+      </article>
+
+      <article class="card reveal">
+        <div class="content">
+          <span class="badge">GET</span>
+          <h3>/api/organizaciones</h3>
+          <p>Devuelve las organizaciones registradas.</p>
+          <div class="codeblock">
+            <button class="copy" onclick="copyCode(this)">📋 Copiar</button>
+            <code>[
+  {
+    "id_org": 1,
+    "nombre_org": "Fundación Esperanza",
+    "ubicacion": "Cancún",
+    "descripcion": "Apoya la educación y alimentación infantil en comunidades marginadas.",
+    "categoria": "Educación",
+    "img": "assets/images/organizaciones/fundacion-esperanza.jpg"
+  }
+]</code>
+          </div>
+        </div>
+      </article>
+
+      <article class="card reveal">
+        <div class="content">
+          <span class="badge">POST</span>
+          <h3>/api/participaciones</h3>
+          <p>Registra que un usuario se une a un voluntariado.</p>
+          <div class="codeblock">
+            <button class="copy" onclick="copyCode(this)">📋 Copiar</button>
+            <code>{
+  "id_usuario": 5,
+  "id_vol": 1
+}</code>
+          </div>
+          <div class="codeblock">
+            <button class="copy" onclick="copyCode(this)">📋 Copiar</button>
+            <code>{
+  "id_part": 321,
+  "estado": "pendiente"
+}</code>
+          </div>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <div class="alert" role="status">✅ Copiado con éxito</div>
+  <footer class="footer"><p>© 2025 IncunetSpaces</p></footer>
+  <script src="script.js"></script>
+</body>
+</html>
