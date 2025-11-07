@@ -1,1 +1,82 @@
-body{font-family:Poppins,Arial,sans-serif;margin:0}/* full CSS omitted for brevity in this runtime */
+const $ = (s, r=document)=> r.querySelector(s);
+const $$ = (s, r=document)=> Array.from(r.querySelectorAll(s));
+
+// Cambiar tema
+function applyTheme(){
+  const t = localStorage.getItem('theme') || 'dark';
+  document.body.classList.toggle('dark', t==='dark');
+  const toggle = $('#theme-toggle');
+  if(toggle) toggle.textContent = t==='dark' ? 'Modo cielo' : 'Modo AMOLED';
+}
+function toggleTheme(){
+  const t = localStorage.getItem('theme') || 'dark';
+  const next = t==='dark' ? 'light' : 'dark';
+  localStorage.setItem('theme', next);
+  applyTheme();
+}
+
+// Navegación activa
+function setActive(){
+  const page = location.pathname.split('/').pop() || 'index.html';
+  $$('.nav-links a, .mobile-menu a').forEach(a => a.classList.toggle('active', a.getAttribute('href')===page));
+}
+
+// Menú móvil
+function initMenu(){
+  const btn = $('#menu-toggle'); const menu = $('#mobile-menu');
+  if(!btn || !menu) return;
+  btn.addEventListener('click', ()=> menu.classList.toggle('open'));
+  $$('.mobile-menu a').forEach(a => a.addEventListener('click', ()=> menu.classList.remove('open')));
+}
+
+// Mostrar alertas
+function showAlert(msg){
+  let el = $('.alert');
+  if(!el){ el = document.createElement('div'); el.className='alert'; document.body.appendChild(el); }
+  el.textContent = msg; el.classList.add('show');
+  setTimeout(()=> el.classList.remove('show'), 1800);
+}
+
+// Copiar bloques de código
+function copyCode(btn){
+  const pre = btn.parentElement.querySelector('code');
+  const txt = pre ? pre.innerText : '';
+  if(!txt) return;
+  navigator.clipboard.writeText(txt).then(()=> showAlert('✅ Copiado con éxito'));
+}
+
+// Cargar datos
+async function fetchJSON(path){ const r = await fetch(path); return await r.json(); }
+
+async function initVoluntariados(){
+  const wrap = $('#lista-vol'); if(!wrap) return;
+  const data = await fetchJSON('mock/voluntariados.json');
+  wrap.innerHTML = data.map(v=>`
+    <article class="card reveal">
+      <img src="${v.img}" alt="${v.nombre_vol}">
+      <div class="content">
+        <span class="badge">${v.categoria}</span>
+        <h3>${v.nombre_vol}</h3>
+        <p>${v.descripcion}</p>
+      </div>
+    </article>`).join('');
+}
+
+async function initOrganizaciones(){
+  const wrap = $('#lista-org'); if(!wrap) return;
+  const data = await fetchJSON('mock/organizaciones.json');
+  wrap.innerHTML = data.map(o=>`
+    <article class="card reveal">
+      <img src="${o.img}" alt="${o.nombre_org}">
+      <div class="content">
+        <span class="badge">${o.categoria}</span>
+        <h3>${o.nombre_org}</h3>
+        <p>${o.descripcion}</p>
+      </div>
+    </article>`).join('');
+}
+
+document.addEventListener('DOMContentLoaded', ()=>{
+  applyTheme(); setActive(); initMenu(); initVoluntariados(); initOrganizaciones();
+  $('#theme-toggle')?.addEventListener('click', toggleTheme);
+});
