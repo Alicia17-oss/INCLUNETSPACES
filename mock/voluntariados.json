@@ -3,7 +3,7 @@
     "id_vol": 1,
     "nombre_vol": "Reforestación en Cancún",
     "categoria": "Medio Ambiente",
-    "descripcion": "Plantación y cuidado de árboles.",
+    "descripcion": "Plantación y cuidado de árboles en zonas afectadas por la deforestación.",
     "img": "assets/images/voluntariados/reforestacion.jpg",
     "fecha_inicio": "2025-06-01"
   },
@@ -11,7 +11,7 @@
     "id_vol": 2,
     "nombre_vol": "Limpieza de Playas",
     "categoria": "Medio Ambiente",
-    "descripcion": "Brigadas de limpieza.",
+    "descripcion": "Brigadas de voluntarios para recolectar desechos y proteger la vida marina.",
     "img": "assets/images/voluntariados/limpieza-playas.jpg",
     "fecha_inicio": "2025-06-15"
   },
@@ -19,7 +19,7 @@
     "id_vol": 3,
     "nombre_vol": "Apoyo a Comunidades Vulnerables",
     "categoria": "Comunidad",
-    "descripcion": "Distribución de alimentos.",
+    "descripcion": "Campañas de apoyo social y distribución de alimentos a familias necesitadas.",
     "img": "assets/images/voluntariados/comunidades.jpg",
     "fecha_inicio": "2025-07-02"
   }
