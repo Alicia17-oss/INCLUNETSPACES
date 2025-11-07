@@ -1,0 +1,26 @@
+[
+  {
+    "id_org": 1,
+    "nombre_org": "Fundación Esperanza",
+    "ubicacion": "Cancún",
+    "descripcion": "Educación y alimentación infantil.",
+    "categoria": "Educación",
+    "img": "assets/images/organizaciones/fundacion-esperanza.jpg"
+  },
+  {
+    "id_org": 2,
+    "nombre_org": "Red Verde",
+    "ubicacion": "Riviera Maya",
+    "descripcion": "Reforestación y reciclaje.",
+    "categoria": "Medio Ambiente",
+    "img": "assets/images/organizaciones/red-verde.jpg"
+  },
+  {
+    "id_org": 3,
+    "nombre_org": "Apoyo a Comunidades",
+    "ubicacion": "CDMX",
+    "descripcion": "Distribución de alimentos y talleres.",
+    "categoria": "Comunidad",
+    "img": "assets/images/organizaciones/apoyo-comunidades.jpg"
+  }
+]
