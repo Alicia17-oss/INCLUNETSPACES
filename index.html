@@ -1,14 +1,52 @@
-<!DOCTYPE html><html lang='es'><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width, initial-scale=1.0'><title>IncunetSpaces – Inicio</title><link rel='stylesheet' href='style.css'></head><body><header class='topbar'>
-  <div class='logo'>Incunet<span>Spaces</span></div>
-  <nav class='nav-links'>
-    <a href='index.html'>Inicio</a>
-    <a href='voluntariados.html'>Voluntariados</a>
-    <a href='organizaciones.html'>Organizaciones</a>
-    <a href='quienes.html'>Quiénes Somos</a>
-    <a href='api.html'>APIs</a>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IncunetSpaces – Inicio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="logo">Incunet<span>Spaces</span></div>
+    <nav class="nav-links">
+      <a href="index.html">Inicio</a>
+      <a href="voluntariados.html">Voluntariados</a>
+      <a href="organizaciones.html">Organizaciones</a>
+      <a href="quienes.html">Quiénes Somos</a>
+      <a href="api.html">APIs</a>
+    </nav>
+    <div class="nav-actions">
+      <button id="theme-toggle" class="hamburger" aria-label="Cambiar tema">Modo AMOLED</button>
+      <button id="menu-toggle" class="hamburger" aria-label="Abrir menú">☰</button>
+    </div>
+  </header>
+
+  <nav id="mobile-menu" class="mobile-menu">
+    <a href="index.html">Inicio</a>
+    <a href="voluntariados.html">Voluntariados</a>
+    <a href="organizaciones.html">Organizaciones</a>
+    <a href="quienes.html">Quiénes Somos</a>
+    <a href="api.html">APIs</a>
   </nav>
-  <div class='nav-actions'>
-    <button id='theme-toggle' class='hamburger' aria-label='Cambiar tema'>Modo AMOLED</button>
-    <button id='menu-toggle' class='hamburger' aria-label='Abrir menú'>☰</button>
-  </div>
-</header><main class='container'><h1>Inicio</h1></main><script src='script.js'></script></body></html>
+
+  <main class="container">
+    <section class="hero">
+      <div>
+        <span class="badge">Plataforma Social</span>
+        <h1>Incunet<span style="color:#00aaff">Spaces</span></h1>
+        <p>Conectamos personas con <b>voluntariados</b> y <b>organizaciones</b>. Diseño glass + neumorphism, con modo AMOLED / Azul cielo.</p>
+        <div class="ctas">
+          <a class="btn" href="voluntariados.html">Explorar Voluntariados</a>
+          <a class="btn alt" href="organizaciones.html">Ver Organizaciones</a>
+        </div>
+      </div>
+      <img src="assets/images/voluntariados/reforestacion.jpg" alt="IncunetSpaces" />
+    </section>
+  </main>
+
+  <footer class="footer"><p>© 2025 IncunetSpaces</p></footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
