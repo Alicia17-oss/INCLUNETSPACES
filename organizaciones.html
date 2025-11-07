@@ -1,14 +1,43 @@
-<!DOCTYPE html><html lang='es'><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width, initial-scale=1.0'><title>Organizaciones – IncunetSpaces</title><link rel='stylesheet' href='style.css'></head><body><header class='topbar'>
-  <div class='logo'>Incunet<span>Spaces</span></div>
-  <nav class='nav-links'>
-    <a href='index.html'>Inicio</a>
-    <a href='voluntariados.html'>Voluntariados</a>
-    <a href='organizaciones.html'>Organizaciones</a>
-    <a href='quienes.html'>Quiénes Somos</a>
-    <a href='api.html'>APIs</a>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Organizaciones – IncunetSpaces</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="logo">Incunet<span>Spaces</span></div>
+    <nav class="nav-links">
+      <a href="index.html">Inicio</a>
+      <a href="voluntariados.html">Voluntariados</a>
+      <a href="organizaciones.html" class="active">Organizaciones</a>
+      <a href="quienes.html">Quiénes Somos</a>
+      <a href="api.html">APIs</a>
+    </nav>
+    <div class="nav-actions">
+      <button id="theme-toggle" class="hamburger">Modo AMOLED</button>
+      <button id="menu-toggle" class="hamburger">☰</button>
+    </div>
+  </header>
+
+  <nav id="mobile-menu" class="mobile-menu">
+    <a href="index.html">Inicio</a>
+    <a href="voluntariados.html">Voluntariados</a>
+    <a href="organizaciones.html">Organizaciones</a>
+    <a href="quienes.html">Quiénes Somos</a>
+    <a href="api.html">APIs</a>
   </nav>
-  <div class='nav-actions'>
-    <button id='theme-toggle' class='hamburger' aria-label='Cambiar tema'>Modo AMOLED</button>
-    <button id='menu-toggle' class='hamburger' aria-label='Abrir menú'>☰</button>
-  </div>
-</header><main class='container'><div id='lista-org'></div></main><script src='script.js'></script></body></html>
+
+  <main class="container">
+    <div class="section-title">
+      <h2>Organizaciones Aliadas</h2>
+    </div>
+    <div id="lista-org" class="grid"></div>
+  </main>
+
+  <footer class="footer"><p>© 2025 IncunetSpaces</p></footer>
+  <script src="script.js"></script>
+</body>
+</html>
