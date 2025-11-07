@@ -3,7 +3,7 @@
     "id_org": 1,
     "nombre_org": "Fundación Esperanza",
     "ubicacion": "Cancún",
-    "descripcion": "Educación y alimentación infantil.",
+    "descripcion": "Apoya la educación y alimentación infantil en comunidades marginadas.",
     "categoria": "Educación",
     "img": "assets/images/organizaciones/fundacion-esperanza.jpg"
   },
@@ -11,7 +11,7 @@
     "id_org": 2,
     "nombre_org": "Red Verde",
     "ubicacion": "Riviera Maya",
-    "descripcion": "Reforestación y reciclaje.",
+    "descripcion": "Promueve acciones ecológicas, campañas de reforestación y reciclaje.",
     "categoria": "Medio Ambiente",
     "img": "assets/images/organizaciones/red-verde.jpg"
   },
@@ -19,7 +19,7 @@
     "id_org": 3,
     "nombre_org": "Apoyo a Comunidades",
     "ubicacion": "CDMX",
-    "descripcion": "Distribución de alimentos y talleres.",
+    "descripcion": "Distribución de alimentos y talleres comunitarios para familias necesitadas.",
     "categoria": "Comunidad",
     "img": "assets/images/organizaciones/apoyo-comunidades.jpg"
   }
